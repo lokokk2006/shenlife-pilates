@@ -64,15 +64,17 @@ const jsonLd = {
   email: SITE.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "台南市",
+    streetAddress: "東橋五路112號",
+    addressLocality: "永康區",
+    addressRegion: "台南市",
     addressCountry: "TW",
   },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "10:00",
-      closes: "21:00",
+      opens: "09:00",
+      closes: "22:00",
     },
     {
       "@type": "OpeningHoursSpecification",

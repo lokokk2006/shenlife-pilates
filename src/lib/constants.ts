@@ -1,25 +1,27 @@
 export const SITE = {
   name: "身活",
-  nameEn: "SHENLIFE",
+  nameEn: "Body Pilates",
   tagline: "感受身體，活出自己",
   description:
     "身活皮拉提斯 — 台南專業器械皮拉提斯教室。透過 Reformer 訓練，找回身體的平衡與力量。",
   url: "https://shenlife.tw",
   lineUrl: "https://line.me/R/ti/p/@shenlife", // TODO: 替換為實際 LINE 官方帳號連結
   lineId: "@shenlife", // TODO: 替換為實際 LINE ID
-  phone: "06-XXX-XXXX", // TODO: 替換為實際電話
+  phone: "06-3026779",
   email: "hello@shenlife.tw", // TODO: 替換為實際 Email
   instagram: "https://www.instagram.com/shenlife_pilates", // TODO: 替換
   facebook: "https://www.facebook.com/shenlife.pilates", // TODO: 替換
 } as const;
 
 export const STORE = {
-  name: "身活皮拉提斯 台南館",
+  name: "身活皮拉提斯",
   city: "台南市",
-  address: "台南市○○區○○路○○號", // TODO: 替換為實際地址
-  googleMapsUrl: "", // TODO: 替換為實際 Google Maps 連結
+  district: "永康區",
+  address: "台南市永康區東橋五路112號",
+  googleMapsUrl: "https://maps.google.com/?q=台南市永康區東橋五路112號",
+  parking: "附近有東橋五路二號公園停車場、康橋商場停車場",
   openHours: {
-    weekday: "10:00 - 21:00",
+    weekday: "09:00 - 22:00",
     saturday: "09:00 - 18:00",
     sunday: "公休",
   },

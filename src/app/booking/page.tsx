@@ -120,7 +120,7 @@ export default function BookingPage() {
             {
               icon: MapPin,
               title: "地點",
-              items: [STORE.name, STORE.address, "附近有停車場"],
+              items: [STORE.name, STORE.address, STORE.parking],
             },
             {
               icon: MessageCircle,
