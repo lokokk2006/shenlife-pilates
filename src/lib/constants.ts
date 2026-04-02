@@ -7,7 +7,7 @@ export const SITE = {
   url: "https://shenlife.tw",
   lineUrl: "https://line.me/R/ti/p/@853wvbka",
   lineId: "@853wvbka",
-  lineQrCode: "https://qr-official.line.me/gs/M_853wvbka.png",
+  lineQrCode: "/images/line-qrcode.png",
   phone: "06-3026779",
   instagram: "https://www.instagram.com/body_pilates2026",
   facebook: "https://www.facebook.com/shenlife.pilates", // TODO: 替換為實際連結
