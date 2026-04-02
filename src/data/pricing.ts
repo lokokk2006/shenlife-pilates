@@ -52,6 +52,20 @@ export const pricingPlans: PricingPlan[] = [
     cta: "立即諮詢",
   },
   {
+    name: "24 堂方案",
+    price: "NT$ 1,700",
+    priceNote: "/ 堂",
+    description: "穩定訓練，開始感受身體的變化。",
+    features: [
+      "1 對 1 課程",
+      "總價 NT$ 40,800",
+      "單堂省 NT$ 100",
+      "自由預約時段",
+      "專屬教練指導",
+    ],
+    cta: "立即諮詢",
+  },
+  {
     name: "36 堂方案",
     price: "NT$ 1,650",
     priceNote: "/ 堂",
@@ -64,6 +78,20 @@ export const pricingPlans: PricingPlan[] = [
       "進度追蹤紀錄",
     ],
     highlight: true,
+    cta: "立即諮詢",
+  },
+  {
+    name: "48 堂方案",
+    price: "NT$ 1,600",
+    priceNote: "/ 堂",
+    description: "深度訓練，讓皮拉提斯成為你的生活習慣。",
+    features: [
+      "1 對 1 課程",
+      "總價 NT$ 76,800",
+      "單堂省 NT$ 200",
+      "專屬訓練計畫",
+      "優先預約權",
+    ],
     cta: "立即諮詢",
   },
   {
