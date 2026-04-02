@@ -34,5 +34,5 @@ export const NAV_ITEMS = [
   { label: "價格方案", href: "/pricing" },
   { label: "部落格", href: "/blog" },
   { label: "常見問題", href: "/faq" },
-  { label: "聯絡我們", href: "/contact" },
+  { label: "門市位置", href: "/contact" },
 ] as const;
