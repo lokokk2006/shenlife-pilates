@@ -18,7 +18,9 @@ export const STORE = {
   city: "台南市",
   district: "永康區",
   address: "台南市永康區東橋五路112號",
-  googleMapsUrl: "https://maps.google.com/?q=台南市永康區東橋五路112號",
+  googleMapsUrl: "https://maps.app.goo.gl/ThaorKa2ND9Dohqe8",
+  googleMapsEmbed:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1836!2d120.2336443!3d23.0208989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e772684e0873d%3A0x7426b68d2cb82f!2z6Ie65Y2X5biC5rC45bq35Y2A5p2x5qmL5LqU6Lev112!5e0!3m2!1szh-TW!2stw",
   parking: "附近有東橋五路二號公園停車場、康橋商場停車場",
   openHours: {
     weekday: "09:00 - 22:00",
