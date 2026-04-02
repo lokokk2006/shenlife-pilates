@@ -36,7 +36,7 @@ export function CtaSection() {
                 href="/booking"
                 className="rounded-full bg-white text-forest px-8 py-3.5 text-base font-medium hover:bg-sand-light transition-colors duration-200"
               >
-                預約體驗課 NT$500
+                預約體驗課 NT$1,600
               </Link>
               <LineButton size="lg">LINE 諮詢</LineButton>
             </div>

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, SectionHeader } from "@/components/shared/section";
-import { pricingPlans } from "@/data/pricing";
+import { pricingPlans, pricingTiers, trialPrice } from "@/data/pricing";
 import { CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "價格方案",
   description:
-    "身活皮拉提斯價格方案 — 體驗課 NT$500 起、單堂課、月方案、堂數方案。找到最適合你的訓練計畫。",
+    "身活皮拉提斯價格方案 — 1 對 1 體驗課 NT$1,600，堂數方案 NT$1,500 起。台南永康器械皮拉提斯。",
 };
 
 export default function PricingPage() {
@@ -23,11 +23,12 @@ export default function PricingPage() {
             價格方案
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-charcoal/60 leading-relaxed">
-            透明的價格，沒有隱藏費用。選擇最適合你的方案，開始你的皮拉提斯旅程。
+            透明的價格，沒有隱藏費用。所有課程皆為 1 對 1 專屬教練指導。
           </p>
         </div>
       </section>
 
+      {/* Plan Cards */}
       <Section>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pricingPlans.map((plan) => (
@@ -37,7 +38,7 @@ export default function PricingPage() {
                 "relative rounded-2xl border p-6 lg:p-8 flex flex-col",
                 plan.highlight
                   ? "border-forest bg-forest text-white shadow-xl scale-[1.02]"
-                  : "border-border bg-white"
+                  : "border-border bg-white shadow-[var(--shadow-card)]"
               )}
             >
               {plan.highlight && (
@@ -103,7 +104,7 @@ export default function PricingPage() {
               <Link
                 href="/booking"
                 className={cn(
-                  "block text-center rounded-full px-6 py-3 text-sm font-medium transition-colors",
+                  "block text-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-250 active:scale-[0.97]",
                   plan.highlight
                     ? "bg-white text-forest hover:bg-sand-light"
                     : "bg-forest text-white hover:bg-sage-dark"
@@ -114,12 +115,62 @@ export default function PricingPage() {
             </div>
           ))}
         </div>
+      </Section>
 
-        <div className="mt-12 text-center text-sm text-charcoal/50">
+      {/* Full Price Table */}
+      <Section className="bg-sand-light/30">
+        <SectionHeader
+          subtitle="Price Table"
+          title="完整價目表"
+          description="一對一課程，買越多越優惠"
+        />
+
+        <div className="max-w-2xl mx-auto">
+          {/* Trial */}
+          <div className="mb-6 rounded-2xl bg-forest text-white p-6 flex items-center justify-between">
+            <div>
+              <p className="font-heading text-lg font-bold">體驗課</p>
+              <p className="text-sm text-white/60">1 對 1 ・ 首次體驗</p>
+            </div>
+            <p className="font-heading text-3xl font-bold">
+              ${trialPrice.toLocaleString()}
+            </p>
+          </div>
+
+          {/* Tier Table */}
+          <div className="rounded-2xl border border-border bg-white overflow-hidden shadow-[var(--shadow-card)]">
+            <div className="grid grid-cols-3 bg-cream px-6 py-3 text-sm font-medium text-charcoal/60">
+              <span>堂數</span>
+              <span className="text-center">單價</span>
+              <span className="text-right">總價</span>
+            </div>
+            {pricingTiers.map((tier, i) => (
+              <div
+                key={tier.sessions}
+                className={cn(
+                  "grid grid-cols-3 px-6 py-4 items-center",
+                  i < pricingTiers.length - 1 && "border-b border-dashed border-border"
+                )}
+              >
+                <span className="font-heading text-lg font-bold text-charcoal">
+                  {tier.sessions} 堂
+                </span>
+                <span className="text-center text-charcoal/70">
+                  ${tier.perSession.toLocaleString()}
+                </span>
+                <span className="text-right font-medium text-forest">
+                  ${tier.total.toLocaleString()}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 text-center text-sm text-charcoal/50">
           <p>
-            以上價格僅供參考，實際費用請透過 LINE 聯繫我們確認。
+            所有方案皆為 1 對 1 專屬教練指導，含器械使用。
             <br />
-            所有方案皆包含專業教練指導與器械使用。
+            詳細方案內容請透過 LINE 聯繫我們。
           </p>
         </div>
       </Section>

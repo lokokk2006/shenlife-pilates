@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "預約體驗",
   description:
-    "預約身活皮拉提斯體驗課，首堂只要 NT$500。透過 LINE 與我們聯繫，開始你的皮拉提斯旅程。",
+    "預約身活皮拉提斯體驗課，首堂只要 NT$1,600。透過 LINE 與我們聯繫，開始你的皮拉提斯旅程。",
 };
 
 const bookingSteps = [
@@ -65,10 +65,10 @@ export default function BookingPage() {
               首堂體驗優惠
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-charcoal mb-2">
-              體驗課 NT$500
+              體驗課 NT$1,600
             </h2>
             <p className="text-lg text-charcoal/60 leading-relaxed mb-8">
-              60 分鐘 1 對 1 專屬體驗，包含身體評估、器械介紹和基礎訓練。
+              1 對 1 專屬體驗，包含身體評估、器械介紹和基礎訓練。
             </p>
             <ul className="space-y-4 mb-8">
               {[

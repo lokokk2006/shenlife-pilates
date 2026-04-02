@@ -8,14 +8,30 @@ export interface PricingPlan {
   cta: string;
 }
 
+export interface PricingTier {
+  sessions: number;
+  perSession: number;
+  total: number;
+}
+
+export const trialPrice = 1600;
+
+export const pricingTiers: PricingTier[] = [
+  { sessions: 12, perSession: 1800, total: 21600 },
+  { sessions: 24, perSession: 1700, total: 40800 },
+  { sessions: 36, perSession: 1650, total: 59400 },
+  { sessions: 48, perSession: 1600, total: 76800 },
+  { sessions: 72, perSession: 1500, total: 108000 },
+];
+
 export const pricingPlans: PricingPlan[] = [
   {
     name: "體驗課",
-    price: "NT$ 500",
-    priceNote: "首堂優惠價",
+    price: "NT$ 1,600",
+    priceNote: "單堂",
     description: "第一次來身活？先來體驗一堂，感受器械皮拉提斯的魅力。",
     features: [
-      "60 分鐘 1 對 1 體驗",
+      "1 對 1 專屬體驗",
       "專業身體評估",
       "Reformer 基礎教學",
       "個人化建議",
@@ -23,44 +39,45 @@ export const pricingPlans: PricingPlan[] = [
     cta: "預約體驗",
   },
   {
-    name: "單堂課",
-    price: "NT$ 1,500",
-    priceNote: "起",
-    description: "彈性選擇，按堂計費，適合時間不固定的你。",
+    name: "12 堂方案",
+    price: "NT$ 1,800",
+    priceNote: "/ 堂",
+    description: "入門首選，建立運動習慣的最佳起點。",
     features: [
-      "50 分鐘課程",
-      "自由選擇課程類型",
-      "1 對 1 或小班制",
-      "可指定教練",
+      "1 對 1 課程",
+      "總價 NT$ 21,600",
+      "自由預約時段",
+      "專屬教練指導",
     ],
-    cta: "了解更多",
+    cta: "立即諮詢",
   },
   {
-    name: "月方案",
-    price: "NT$ 4,800",
-    priceNote: "起 / 月",
-    description: "每週固定訓練，養成運動習慣，效果最顯著。",
+    name: "36 堂方案",
+    price: "NT$ 1,650",
+    priceNote: "/ 堂",
+    description: "最多人選擇！持續訓練，看見身體的明顯改變。",
     features: [
-      "每月 4 堂課",
-      "固定時段預約",
+      "1 對 1 課程",
+      "總價 NT$ 59,400",
+      "單堂省 NT$ 150",
       "專屬訓練計畫",
       "進度追蹤紀錄",
-      "優先預約權",
     ],
     highlight: true,
     cta: "立即諮詢",
   },
   {
-    name: "堂數方案",
-    price: "NT$ 12,000",
-    priceNote: "起 / 10 堂",
-    description: "一次購買多堂，享有更優惠的價格，彈性使用。",
+    name: "72 堂方案",
+    price: "NT$ 1,500",
+    priceNote: "/ 堂",
+    description: "最優惠價格，長期投資你的身體健康。",
     features: [
-      "10 / 20 / 30 堂可選",
-      "使用期限 3-6 個月",
-      "自由預約時段",
-      "可轉讓 1 次",
+      "1 對 1 課程",
+      "總價 NT$ 108,000",
+      "單堂省 NT$ 300",
+      "專屬訓練計畫",
+      "優先預約權",
     ],
-    cta: "了解更多",
+    cta: "立即諮詢",
   },
 ];
