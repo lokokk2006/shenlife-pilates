@@ -28,7 +28,7 @@ export function FeaturedCourses() {
           >
             <Link
               href={`/courses/${course.slug}`}
-              className="group block h-full rounded-2xl border border-border bg-white p-6 hover:shadow-lg hover:border-sage/30 transition-all duration-300"
+              className="group block h-full rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] hover:border-sage/30 transition-all duration-250"
             >
               {/* Placeholder Image Area */}
               <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-sage/10 to-sand-light/50 mb-5 flex items-center justify-center overflow-hidden">

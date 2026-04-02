@@ -18,8 +18,8 @@ export function LineButton({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center gap-2 rounded-full font-medium transition-all duration-200",
-        "bg-[#06C755] text-white hover:bg-[#05b34c] hover:shadow-lg",
+        "inline-flex items-center gap-2 rounded-full font-medium transition-all duration-250",
+        "bg-[#06C755] text-white hover:bg-[#05b34c] hover:shadow-[var(--shadow-hover)] active:scale-[0.97]",
         size === "default" && "px-6 py-2.5 text-sm",
         size === "lg" && "px-8 py-3.5 text-base",
         className

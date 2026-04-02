@@ -47,7 +47,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* 身活品牌色 */
+  /* 身活品牌色 — Nature Distilled palette */
   --color-sage: #7C8B6F;
   --color-sage-light: #A3B096;
   --color-sage-dark: #5A6650;
@@ -56,6 +56,19 @@
   --color-forest: #2D4A3E;
   --color-cream: #FAFAF7;
   --color-charcoal: #2C2C2C;
+
+  /* Nature Distilled effects (UI UX Pro Max) */
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 4px 16px rgba(44, 74, 62, 0.06);
+  --shadow-hover: 0 12px 40px rgba(44, 74, 62, 0.10);
+  --organic-radius: 1.25rem;
+  --grain-opacity: 0.03;
+
+  /* Font stack: Lora (EN headings) → Noto Serif TC (CJK fallback) */
+  --font-heading: var(--font-lora), var(--font-heading-cjk), serif;
+  --font-heading-cjk: var(--font-noto-serif-tc);
+  /* Font stack: Raleway (EN body) → Noto Sans TC (CJK fallback) */
+  --font-sans: var(--font-raleway), var(--font-noto-sans-tc), sans-serif;
 }
 
 :root {
@@ -107,5 +120,28 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+  }
+
+  /* UX: cursor-pointer on all interactive elements (UI UX Pro Max) */
+  a, button, [role="button"], input[type="submit"], input[type="button"],
+  summary, [tabindex]:not([tabindex="-1"]) {
+    cursor: pointer;
+  }
+
+  /* UX: prefers-reduced-motion — disable all animations (UI UX Pro Max) */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* UX: visible focus rings for keyboard navigation (WCAG AA) */
+  :focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }

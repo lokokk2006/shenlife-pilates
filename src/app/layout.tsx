@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_TC, Noto_Serif_TC, Inter } from "next/font/google";
+import { Noto_Sans_TC, Noto_Serif_TC, Lora, Raleway } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SITE } from "@/lib/constants";
@@ -17,9 +17,16 @@ const notoSerifTC = Noto_Serif_TC({
   weight: ["400", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -84,7 +91,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh-TW"
-      className={`${notoSansTC.variable} ${notoSerifTC.variable} ${inter.variable} h-full antialiased`}
+      className={`${notoSansTC.variable} ${notoSerifTC.variable} ${lora.variable} ${raleway.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <script
