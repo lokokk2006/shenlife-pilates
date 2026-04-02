@@ -83,7 +83,27 @@ export default function BookingPage() {
                 </li>
               ))}
             </ul>
-            <LineButton size="lg">LINE 預約體驗課</LineButton>
+            <div className="flex items-center gap-6">
+              <LineButton size="lg">LINE 預約體驗課</LineButton>
+              <a
+                href={SITE.lineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={SITE.lineQrCode}
+                  alt="LINE QR Code"
+                  width={100}
+                  height={100}
+                  className="rounded-lg shadow-[var(--shadow-card)]"
+                />
+              </a>
+            </div>
+            <p className="mt-3 text-xs text-charcoal/40">
+              掃描 QR Code 加入好友，或搜尋 ID：{SITE.lineId}
+            </p>
           </div>
 
           <div className="bg-cream rounded-2xl p-8 lg:p-10">

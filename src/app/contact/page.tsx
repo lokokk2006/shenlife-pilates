@@ -92,9 +92,27 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 flex items-center gap-6">
               <LineButton size="lg">LINE 聯繫我們</LineButton>
+              <a
+                href={SITE.lineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={SITE.lineQrCode}
+                  alt="LINE QR Code"
+                  width={100}
+                  height={100}
+                  className="rounded-lg shadow-[var(--shadow-card)]"
+                />
+              </a>
             </div>
+            <p className="mt-2 text-xs text-charcoal/40">
+              掃描 QR Code 或搜尋 ID：{SITE.lineId}
+            </p>
           </div>
 
           {/* Map Placeholder */}
