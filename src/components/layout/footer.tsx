@@ -84,8 +84,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors">
-                  {SITE.email}
+                <a href={SITE.lineUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  LINE {SITE.lineId}
                 </a>
               </li>
             </ul>

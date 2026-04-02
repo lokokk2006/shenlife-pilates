@@ -5,12 +5,11 @@ export const SITE = {
   description:
     "身活皮拉提斯 — 台南專業器械皮拉提斯教室。透過 Reformer 訓練，找回身體的平衡與力量。",
   url: "https://shenlife.tw",
-  lineUrl: "https://line.me/R/ti/p/@shenlife", // TODO: 替換為實際 LINE 官方帳號連結
-  lineId: "@shenlife", // TODO: 替換為實際 LINE ID
+  lineUrl: "https://line.me/R/ti/p/@853wvbka",
+  lineId: "@853wvbka",
   phone: "06-3026779",
-  email: "hello@shenlife.tw", // TODO: 替換為實際 Email
-  instagram: "https://www.instagram.com/shenlife_pilates", // TODO: 替換
-  facebook: "https://www.facebook.com/shenlife.pilates", // TODO: 替換
+  instagram: "https://www.instagram.com/shenlife_pilates", // TODO: 替換為實際連結
+  facebook: "https://www.facebook.com/shenlife.pilates", // TODO: 替換為實際連結
 } as const;
 
 export const STORE = {

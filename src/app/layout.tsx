@@ -61,7 +61,6 @@ const jsonLd = {
   description: SITE.description,
   url: SITE.url,
   telephone: SITE.phone,
-  email: SITE.email,
   address: {
     "@type": "PostalAddress",
     streetAddress: "東橋五路112號",

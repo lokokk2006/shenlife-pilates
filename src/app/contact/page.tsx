@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Section, SectionHeader } from "@/components/shared/section";
 import { LineButton } from "@/components/shared/line-button";
 import { SITE, STORE } from "@/lib/constants";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "聯絡我們",
@@ -61,16 +61,18 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage/10">
-                  <Mail className="w-5 h-5 text-sage" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#06C755]/10">
+                  <MessageCircle className="w-5 h-5 text-[#06C755]" />
                 </div>
                 <div>
-                  <p className="font-medium text-charcoal mb-1">Email</p>
+                  <p className="font-medium text-charcoal mb-1">LINE 官方帳號</p>
                   <a
-                    href={`mailto:${SITE.email}`}
+                    href={SITE.lineUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-charcoal/60 hover:text-forest transition-colors"
                   >
-                    {SITE.email}
+                    {SITE.lineId}
                   </a>
                 </div>
               </div>
